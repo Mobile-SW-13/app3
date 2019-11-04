@@ -18,20 +18,21 @@ class MainActivity : AppCompatActivity() {
 
         button_word.setOnClickListener{
             supportFragmentManager.beginTransaction()
-                .replace(R.id.button_word, Fragment_word())
+                .replace(R.id.fragment, Fragment_word())
                 .commit()
         }
 
         button_both.setOnClickListener{
             supportFragmentManager.beginTransaction()
-                .replace(R.id.button_both, Fragment_both())
+                .replace(R.id.fragment, Fragment_both())
                 .commit()
         }
 
         button_mean.setOnClickListener{
             supportFragmentManager.beginTransaction()
-                .replace(R.id.button_mean, Fragment_mean())
+                .replace(R.id.fragment, Fragment_mean())
                 .commit()
         }
     }
+
 }

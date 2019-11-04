@@ -16,6 +16,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        button_find.setOnClickListener{
+            val intent=Intent(this,FindActivity::class.java)
+            startActivity(intent)
+        }
+
         button_word.setOnClickListener{
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, Fragment_word())

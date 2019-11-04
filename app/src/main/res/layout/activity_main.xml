@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+    <fragment
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:name="com.example.myapplication.Fragment_word"
+            android:id="@+id/fragment" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonlist" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0" android:layout_marginTop="50dp"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="395dp"
+            android:layout_height="100dp"
+            android:id="@+id/buttonlist" app:layout_constraintTop_toBottomOf="@id/fragment"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+        <Button
+                android:text="WORD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:id="@+id/button_word" app:layout_constraintRight_toLeftOf="@id/button_both"
+                app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+                android:text="BOTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:id="@+id/button_both" app:layout_constraintLeft_toRightOf="@id/button_word"
+                app:layout_constraintRight_toLeftOf="@id/button_mean" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+                android:text="MEAN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:id="@+id/button_mean" app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_both" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintRight_toRightOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fragment" app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.constraint.ConstraintLayout>
+    <Button
+            android:text="QUIZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:id="@+id/button_quiz" app:layout_constraintTop_toTopOf="parent"
+    />
+
+</android.support.constraint.ConstraintLayout>

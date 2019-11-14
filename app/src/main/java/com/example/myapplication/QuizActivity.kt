@@ -24,6 +24,7 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz)
 
         var i=0
+        var correct=0
         val random = Random()
         var num = random.nextInt(5)
         var word_random=word_array.get(num)
@@ -48,11 +49,13 @@ class QuizActivity : AppCompatActivity() {
                         //num = random.nextInt(5)
                         //word_random=word_array.get(num)
                         textView2.setText(word_random)
+                        correct++
                         //val intent = Intent(this, QuizActivity::class.java)
                         //startActivity(intent)
                     } else {
                         button4.setBackgroundColor(Color.GRAY)
                     }
+                    i++
                 }
 
                 button5.setOnClickListener {
@@ -60,9 +63,11 @@ class QuizActivity : AppCompatActivity() {
                         num = random.nextInt(5)
                         word_random = word_array.get(num)
                         textView2.setText(word_random)
+                        correct++
                     } else {
                         button5.setBackgroundColor(Color.GRAY)
                     }
+                    i++
                 }
 
                 button6.setOnClickListener {
@@ -70,11 +75,13 @@ class QuizActivity : AppCompatActivity() {
                         num = random.nextInt(5)
                         word_random = word_array.get(num)
                         textView2.setText(word_random)
+                        correct++
                     } else {
                         button6.setBackgroundColor(Color.GRAY)
                     }
+                    i++
                 }
-            i++
+
             if(i==5) {
                 val intent = Intent(this, ResultActivity::class.java)
                 startActivity(intent)
@@ -83,6 +90,7 @@ class QuizActivity : AppCompatActivity() {
 
         button_home.setOnClickListener{
             val intent=Intent(this,MainActivity::class.java)
+            intent.putExtra("correct",correct)
             startActivity(intent)
         }
 
